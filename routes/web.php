@@ -1,5 +1,6 @@
 <?php
 
+use Carbon\Carbon;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,6 +23,7 @@ Route::get('/fecha-actual', function () {
     $fechaActual = Carbon::now();
     return "La fecha actual es: " . $fechaActual->format('Y-m-d H:i:s');
 });
+
 
 Route::get('/contar-caracteres/{cadena}', function ($cadena) {
     $numeroCaracteres = strlen($cadena);
